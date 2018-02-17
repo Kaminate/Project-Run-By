@@ -1,0 +1,12 @@
+varying vec2 f_texcoord;
+uniform sampler2D mytexture;
+
+void main(void)
+{
+  vec4 result = texture2D(mytexture, f_texcoord);
+  
+  //result.z = f_texcoord.x;
+  //result.w = 1;
+
+  gl_FragColor = result;
+}
